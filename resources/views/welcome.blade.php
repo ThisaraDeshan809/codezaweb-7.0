@@ -1,100 +1,191 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.main')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+          <img src="assets/img/about.jpg" class="img-fluid" alt="">
         </div>
-    </body>
-</html>
+        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+          <h3 style="color: white; text-align: center;">Empowering Success through Innovation: Unveiling Codeza's Journey</h3>
+          <p class="fst-italic" style="color: white; font-size: 18px; text-align: center;">
+            At Codeza, we believe in the transformative power of technology. Our dedicated team of experts is committed to crafting exceptional software and web design solutions tailored to your unique needs. With a rich history of successful projects and satisfied clients, we have honed our skills to provide innovative and scalable solutions. Our passion for creativity, coupled with our relentless pursuit of excellence, fuels our drive to deliver remarkable results. We foster collaboration, transparency, and trust, ensuring a seamless partnership as we bring your vision to life. Join us on this exciting journey and let's shape the future together.
+          </p>
+
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="counts" class="counts section-bg">
+    <div class="container">
+
+      <div class="row counters">
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0" data-purecounter-end="40" data-purecounter-duration="1" class="purecounter"></span>
+          <p>All Projects</p>
+        </div>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Web Projects</p>
+        </div>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Mobile Projects</p>
+        </div>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Clients</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="why-us" class="why-us">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row">
+        <div class="col-lg-4 d-flex align-items-stretch">
+          <div class="content">
+            <h3>Why Choose Codeza?</h3>
+            <p>
+              Discover the Codeza Advantage - Unparalleled Expertise and Exceptional Results. With a track record of excellence, we deliver innovative software and web design solutions tailored to your needs. Choose Codeza and unlock your business's full potential in the digital landscape.
+            </p>
+            <div class="text-center">
+              <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-boxes d-flex flex-column justify-content-center">
+            <div class="row">
+              <div class="col-xl-4 d-flex align-items-stretch">
+                <div class="icon-box mt-4 mt-xl-0">
+                  <i class='bx bx-devices'></i>
+                  <h4>WEB DEVELOPING</h4>
+                  <p>Unlocking digital possibilities through expert web development services. Elevate your online presence with Codeza.</p>
+                </div>
+              </div>
+              <div class="col-xl-4 d-flex align-items-stretch">
+                <div class="icon-box mt-4 mt-xl-0">
+                  <i class='bx bx-mobile'></i>
+                  <h4>SOFTWARE DEVELOPING</h4>
+                  <p>"Empowering businesses with cutting-edge software solutions. Trust Codeza for exceptional software development services."</p>
+                </div>
+              </div>
+              <div class="col-xl-4 d-flex align-items-stretch">
+                <div class="icon-box mt-4 mt-xl-0">
+                  <i class='bx bx-slideshow'></i>
+                  <h4>UI/UX DESIGNING</h4>
+                  <p>"Crafting captivating user experiences through intuitive and visually stunning UI/UX designs. Choose Codeza for unforgettable digital interactions."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {{-- <section id="trainers" class="trainers">
+
+    <div class="container" data-aos="fade-up">
+
+      <div class="row" data-aos="zoom-in" data-aos-delay="100">
+        <h2 style="color: wheat; text-align: center;">Our Team</h2>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+
+          <div class="member">
+
+            <img src="assets/img/trainers/guliya.jpg" class="img-fluid" alt="" >
+            <div class="member-content">
+              <h4>M.E.T.S.DESHAN</h4>
+              <span>Fullstack Developer</span>
+              <p>
+                Tech enthusiast creating seamless digital experiences with expertise in both front-end and back-end development.
+              </p>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <img src="assets/img/trainers/kaiya.jpg" class="img-fluid" alt="">
+            <div class="member-content">
+              <h4>H.D.C.BANDARA</h4>
+              <span>UI/UX DESIGNER & Frontend Developer</span>
+              <p>
+                Creative designer with a passion for intuitive user experiences and expertise in frontend development.
+              </p>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <img src="assets/img/trainers/sajee.jpg" class="img-fluid" alt="">
+            <div class="member-content">
+              <h4>Sajeewan</h4>
+              <span>ML & Mobile App Developer</span>
+              <p>
+                Innovative mobile app developer with a focus on machine learning algorithms, delivering cutting-edge solutions.                </p>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <img src="assets/img/trainers/sritharan.jpg" class="img-fluid" alt="">
+            <div class="member-content">
+              <h4>Sritharan</h4>
+              <span>ML & Mobile App Developer</span>
+              <p>
+                Expert in mobile app development and machine learning, leveraging technology to create intelligent and user-centric applications.                </p>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section> --}}
+
+@endsection
